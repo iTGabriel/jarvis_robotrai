@@ -1,0 +1,166 @@
+{
+    "Command": "\"tail -f /dev/null\"",
+    "CreatedAt": "2026-10-28 20:43:48 -0300 -03",
+    "Engine": "",
+    "ExitCode": 0,
+    "Health": "",
+    "ID": "494fb3d45aef",
+    "Image": "rockylinux:9",
+    "Labels": "com.docker.compose.image=sha256:d644d203142cd5b54ad2a83a203e1dee68af2229f8fe32f52a30c6e1d3c3a9e0,com.docker.compose.service=agent,com.docker.compose.depends_on=ollama:service_started:false,vector-db:service_started:false,com.docker.compose.oneoff=False,com.docker.compose.project.config_files=D:\\tech\\labs\\POC_IA_JARVIS_HRFERRO\\docker-compose.yaml,com.docker.compose.version=5.6.0,desktop.docker.io/binds/0/SourceKind=hostFile,desktop.docker.io/binds/0/Target=/opt/jarvis/workspace,desktop.docker.io/ports.scheme=v2,com.docker.compose.config-hash=b27baabd7b0e7556b22d6fddfad401ae0b9a949fe8cc1a281b289d5d62ee2470,com.docker.compose.container-number=1,com.docker.compose.project.working_dir=D:\\tech\\labs\\POC_IA_JARVIS_HRFERRO,com.docker.compose.project=poc_ia_jarvis_hrferro,com.docker.compose.replace=jarvis-agent,desktop.docker.io/binds/0/Source=D:\\tech\\labs\\POC_IA_JARVIS_HRFERRO",
+    "LocalVolumes": "0",
+    "Mounts": "/run/desktop/m…",
+    "Name": "jarvis-agent",
+    "Names": "jarvis-agent",
+    "Networks": "poc_ia_jarvis_hrferro_default",
+    "Ports": "",
+    "Project": "poc_ia_jarvis_hrferro",
+    "Publishers": [],
+    "RunningFor": "7 minutes ago",
+    "Service": "agent",
+    "Size": "0B",
+    "State": "running",
+    "Status": "Up 2 minutes"
+}
+{
+    "Command": "\"tail -f /dev/null\"",
+    "CreatedAt": "2026-10-28 20:02:46 -0300 -03",
+    "Engine": "",
+    "ExitCode": 0,
+    "Health": "",
+    "ID": "47aa448e0f9b",
+    "Image": "python:3.10-slim",
+    "Labels": "desktop.docker.io/binds/0/Target=/opt/jarvis/workspace,desktop.docker.io/ports.scheme=v2,com.docker.compose.depends_on=,com.docker.compose.image=sha256:7b6bd969dda3ecfca0655524e338b57a8b8cd692a9362e3d55b5a3ef49b07256,com.docker.compose.oneoff=False,com.docker.compose.project=poc_ia_jarvis_hrferro,com.docker.compose.project.config_files=D:\\tech\\labs\\POC_IA_JARVIS_HRFERRO\\docker-compose.yaml,com.docker.compose.service=audio-service,desktop.docker.io/binds/0/Source=D:\\tech\\labs\\POC_IA_JARVIS_HRFERRO,desktop.docker.io/binds/0/SourceKind=hostFile,com.docker.compose.config-hash=c6e2d502f6345560772d40ca23f73e9982252f1507b07c581aefc6a77e4e6981,com.docker.compose.container-number=1,com.docker.compose.project.working_dir=D:\\tech\\labs\\POC_IA_JARVIS_HRFERRO,com.docker.compose.version=5.6.0",
+    "LocalVolumes": "0",
+    "Mounts": "/run/desktop/m…",
+    "Name": "jarvis-audio",
+    "Names": "jarvis-audio",
+    "Networks": "poc_ia_jarvis_hrferro_default",
+    "Ports": "",
+    "Project": "poc_ia_jarvis_hrferro",
+    "Publishers": [],
+    "RunningFor": "48 minutes ago",
+    "Service": "audio-service",
+    "Size": "0B",
+    "State": "running",
+    "Status": "Up 2 minutes"
+}
+{
+    "Command": "\"/bin/ollama serve\"",
+    "CreatedAt": "2026-10-28 20:43:48 -0300 -03",
+    "Engine": "",
+    "ExitCode": 0,
+    "Health": "",
+    "ID": "6c03fa65533c",
+    "Image": "ollama/ollama:latest",
+    "Labels": "com.docker.compose.version=5.6.0,desktop.docker.io/binds/0/Source=D:\\tech\\labs\\POC_IA_JARVIS_HRFERRO\\ollama_data,com.docker.compose.replace=jarvis-ollama,com.docker.compose.config-hash=120996575e0b1dd1cd84b79d1afb959893cada566149b8ece5a69fcc77a282cc,com.docker.compose.container-number=1,com.docker.compose.image=sha256:a6b23ad2a921327c4bc6f5e0c9ec375e08d73e5b94a68d3e87fb1613e93c5e30,com.docker.compose.project=poc_ia_jarvis_hrferro,com.docker.compose.project.working_dir=D:\\tech\\labs\\POC_IA_JARVIS_HRFERRO,com.docker.compose.service=ollama,desktop.docker.io/binds/0/SourceKind=hostFile,desktop.docker.io/binds/0/Target=/root/.ollama,com.docker.compose.project.config_files=D:\\tech\\labs\\POC_IA_JARVIS_HRFERRO\\docker-compose.yaml,desktop.docker.io/ports.scheme=v2,desktop.docker.io/ports/11434/tcp=:11434,org.opencontainers.image.version=24.04,com.docker.compose.depends_on=,com.docker.compose.oneoff=False",
+    "LocalVolumes": "0",
+    "Mounts": "/run/desktop/m…",
+    "Name": "jarvis-ollama",
+    "Names": "jarvis-ollama",
+    "Networks": "poc_ia_jarvis_hrferro_default",
+    "Ports": "0.0.0.0:11434-\u003e11434/tcp, [::]:11434-\u003e11434/tcp",
+    "Project": "poc_ia_jarvis_hrferro",
+    "Publishers": [
+        {
+            "URL": "0.0.0.0",
+            "TargetPort": 11434,
+            "PublishedPort": 11434,
+            "Protocol": "tcp"
+        },
+        {
+            "URL": "::",
+            "TargetPort": 11434,
+            "PublishedPort": 11434,
+            "Protocol": "tcp"
+        }
+    ],
+    "RunningFor": "7 minutes ago",
+    "Service": "ollama",
+    "Size": "0B",
+    "State": "running",
+    "Status": "Up 2 minutes"
+}
+{
+    "Command": "\"./entrypoint.sh\"",
+    "CreatedAt": "2026-10-28 20:02:46 -0300 -03",
+    "Engine": "",
+    "ExitCode": 0,
+    "Health": "",
+    "ID": "95d8cd14b337",
+    "Image": "qdrant/qdrant:latest",
+    "Labels": "com.docker.compose.version=5.6.0,desktop.docker.io/ports/6334/tcp=:6334,org.opencontainers.image.version=v1.20.0,com.docker.compose.depends_on=,com.docker.compose.project.working_dir=D:\\tech\\labs\\POC_IA_JARVIS_HRFERRO,org.opencontainers.image.source=https://github.com/qdrant/qdrant,org.opencontainers.image.url=https://qdrant.com/,desktop.docker.io/binds/0/Source=D:\\tech\\labs\\POC_IA_JARVIS_HRFERRO\\qdrant_data,desktop.docker.io/binds/0/SourceKind=hostFile,desktop.docker.io/binds/0/Target=/qdrant/storage,desktop.docker.io/ports.scheme=v2,desktop.docker.io/ports/6333/tcp=:6333,org.opencontainers.image.description=Official Qdrant image,org.opencontainers.image.title=Qdrant,com.docker.compose.config-hash=d66bbeb5757ecebe055dd97e24d482db6a6179806efd0a09d68e39120d77cb0b,com.docker.compose.oneoff=False,com.docker.compose.project=poc_ia_jarvis_hrferro,org.opencontainers.image.documentation=https://qdrant.com/docs,org.opencontainers.image.vendor=Qdrant,com.docker.compose.container-number=1,com.docker.compose.image=sha256:2d1b0bfd0a961275481ea09400fc98008216ae54e1b52ed7d24520d63050c644,com.docker.compose.project.config_files=D:\\tech\\labs\\POC_IA_JARVIS_HRFERRO\\docker-compose.yaml,com.docker.compose.service=vector-db",
+    "LocalVolumes": "0",
+    "Mounts": "/run/desktop/m…",
+    "Name": "jarvis-vector-db",
+    "Names": "jarvis-vector-db",
+    "Networks": "poc_ia_jarvis_hrferro_default",
+    "Ports": "0.0.0.0:6333-6334-\u003e6333-6334/tcp, [::]:6333-6334-\u003e6333-6334/tcp",
+    "Project": "poc_ia_jarvis_hrferro",
+    "Publishers": [
+        {
+            "URL": "0.0.0.0",
+            "TargetPort": 6333,
+            "PublishedPort": 6333,
+            "Protocol": "tcp"
+        },
+        {
+            "URL": "::",
+            "TargetPort": 6333,
+            "PublishedPort": 6333,
+            "Protocol": "tcp"
+        },
+        {
+            "URL": "0.0.0.0",
+            "TargetPort": 6334,
+            "PublishedPort": 6334,
+            "Protocol": "tcp"
+        },
+        {
+            "URL": "::",
+            "TargetPort": 6334,
+            "PublishedPort": 6334,
+            "Protocol": "tcp"
+        }
+    ],
+    "RunningFor": "48 minutes ago",
+    "Service": "vector-db",
+    "Size": "0B",
+    "State": "running",
+    "Status": "Up 2 minutes"
+}
+{
+    "Command": "\"bash start.sh\"",
+    "CreatedAt": "2026-10-28 20:02:47 -0300 -03",
+    "Engine": "",
+    "ExitCode": 0,
+    "Health": "healthy",
+    "ID": "9c382f4251a9",
+    "Image": "ghcr.io/open-webui/open-webui:main",
+    "Labels": "org.opencontainers.image.revision=33c1978d5bad52a31df75ea55143025dfad18d16,com.docker.compose.depends_on=ollama:service_started:false,com.docker.compose.image=sha256:00c9718304270c6257104294a679028e18ea31922610f559eaef1c4f726a00e6,desktop.docker.io/ports.scheme=v2,org.opencontainers.image.description=User-friendly AI Interface (Supports Ollama, OpenAI API, ...),org.opencontainers.image.licenses=NOASSERTION,org.opencontainers.image.title=open-webui,org.opencontainers.image.url=https://github.com/open-webui/open-webui,desktop.docker.io/binds/0/SourceKind=hostFile,desktop.docker.io/binds/0/Target=/app/backend/data,com.docker.compose.config-hash=ab7304a7e5ffa63e8be03b6ce2575f68be30b87cfacf7b6f477d7c89f0969f1f,com.docker.compose.project.config_files=D:\\tech\\labs\\POC_IA_JARVIS_HRFERRO\\docker-compose.yaml,org.opencontainers.image.source=https://github.com/open-webui/open-webui,org.opencontainers.image.version=main,desktop.docker.io/binds/0/Source=D:\\tech\\labs\\POC_IA_JARVIS_HRFERRO\\webui_data,desktop.docker.io/ports/8080/tcp=:3000,com.docker.compose.container-number=1,com.docker.compose.oneoff=False,com.docker.compose.project=poc_ia_jarvis_hrferro,com.docker.compose.project.working_dir=D:\\tech\\labs\\POC_IA_JARVIS_HRFERRO,com.docker.compose.service=open-webui,com.docker.compose.version=5.6.0,org.opencontainers.image.created=2026-10-25T08:06:28.770Z",
+    "LocalVolumes": "0",
+    "Mounts": "/run/desktop/m…",
+    "Name": "jarvis-webui",
+    "Names": "jarvis-webui",
+    "Networks": "poc_ia_jarvis_hrferro_default",
+    "Ports": "0.0.0.0:3000-\u003e8080/tcp, [::]:3000-\u003e8080/tcp",
+    "Project": "poc_ia_jarvis_hrferro",
+    "Publishers": [
+        {
+            "URL": "0.0.0.0",
+            "TargetPort": 8080,
+            "PublishedPort": 3000,
+            "Protocol": "tcp"
+        },
+        {
+            "URL": "::",
+            "TargetPort": 8080,
+            "PublishedPort": 3000,
+            "Protocol": "tcp"
+        }
+    ],
+    "RunningFor": "48 minutes ago",
+    "Service": "open-webui",
+    "Size": "0B",
+    "State": "running",
+    "Status": "Up 2 minutes (healthy)"
+}
